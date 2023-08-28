@@ -8,7 +8,7 @@ always_ff @(posedge maq_h_clock or negedge maq_h_reset)
 	if (!maq_h_reset)
 		maq_h_lsd <= 4'd0;
 	else
-		if (maq_h_lsd == 4'd4 && maq_h_msd == 2'd2) 
+		if (maq_h_lsd == 4'd3 && maq_h_msd == 2'd2) 
 				maq_h_lsd <= 4'd0;
 		else
 			if (maq_h_lsd == 4'd9)
@@ -20,7 +20,7 @@ always_ff @(posedge maq_h_clock or negedge maq_h_reset)
 	if (!maq_h_reset)
 		maq_h_msd <= 2'd0;
 	else
-		if (maq_h_lsd == 4'd4 && maq_h_msd == 2'd2) 
+		if (maq_h_lsd == 4'd3 && maq_h_msd == 2'd2) 
 				maq_h_msd <= 2'd0;
 		else
 			if (maq_h_lsd==4'd9)
